@@ -1,0 +1,106 @@
+/* ═══════════════════════════════════════════════════
+   PHC DESIGN TOKENS — Shadcn-inspired, v2
+═══════════════════════════════════════════════════ */
+
+:root {
+  /* ── Backgrounds ── */
+  --c-bg-app:     #F7F7F6;
+  --c-bg-surface: #FFFFFF;
+  --c-bg-raised:  #FFFFFF;
+  --c-bg-sunken:  #F0EDE8;
+  --c-bg-muted:   #F3F3F2;
+
+  /* ── Text ── */
+  --c-text-primary:   #09090B;
+  --c-text-secondary: #52525B;
+  --c-text-tertiary:  #71717A;
+  --c-text-disabled:  #A1A1AA;
+  --c-text-inverse:   #FAFAFA;
+
+  /* ── Brand (Teal) ── */
+  --c-brand:       #0D5C5C;
+  --c-brand-light: #E8F4F4;
+  --c-brand-mid:   #B3D8D8;
+  --c-brand-dark:  #094040;
+
+  /* ── Semantic ── */
+  --c-ok:            #16A34A;
+  --c-ok-light:      #DCFCE7;
+  --c-ok-fg:         #14532D;
+
+  --c-warn:          #D97706;
+  --c-warn-light:    #FEF3C7;
+  --c-warn-fg:       #92400E;
+
+  --c-critical:      #DC2626;
+  --c-critical-light:#FEE2E2;
+  --c-critical-fg:   #7F1D1D;
+
+  --c-info:          #2563EB;
+  --c-info-light:    #DBEAFE;
+  --c-info-fg:       #1E3A8A;
+
+  /* ── Structure ── */
+  --c-border:        rgba(9,9,11,0.09);
+  --c-border-strong: rgba(9,9,11,0.16);
+  --c-divider:       rgba(9,9,11,0.06);
+  --c-ring:          rgba(9,9,11,0.06);
+
+  /* ── Typography ── */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Scale */
+  --t-2xs: 10px;
+  --t-xs:  12px;  --t-xs-lh:  1.4;
+  --t-sm:  13px;  --t-sm-lh:  1.45;
+  --t-base:15px;  --t-base-lh:1.5;
+  --t-md:  17px;  --t-md-lh:  1.4;
+  --t-lg:  20px;  --t-lg-lh:  1.3;
+  --t-xl:  24px;  --t-xl-lh:  1.25;
+  --t-2xl: 30px;  --t-2xl-lh: 1.2;
+  --t-3xl: 40px;  --t-3xl-lh: 1.1;
+  --t-4xl: 56px;  --t-4xl-lh: 1.0;
+
+  /* Weights */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extrabold:800;
+
+  /* ── Spacing (4-pt grid) ── */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-8: 32px;  --sp-10: 40px;
+  --sp-12: 48px; --sp-16: 64px;
+
+  /* ── Radius ── */
+  --r-xs:  4px;
+  --r-sm:  8px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  18px;
+  --r-2xl: 24px;
+  --r-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 28px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.05);
+  --shadow-brand: 0 4px 14px rgba(13,92,92,0.28);
+  --shadow-critical: 0 4px 14px rgba(220,38,38,0.35);
+
+  /* ── Motion ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --dur-fast:   140ms;
+  --dur-normal: 240ms;
+  --dur-slow:   380ms;
+
+  /* ── Layout ── */
+  --nav-h:  60px;
+  --px:     16px;
+}

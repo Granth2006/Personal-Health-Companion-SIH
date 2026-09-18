@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0D5C5C">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="PHC">
+  <meta name="description" content="Personal Health Companion — Real-time health monitoring and disaster resilience">
+  <title>PHC — Personal Health Companion</title>
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <style>
+    :root {
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <!-- Screen container -->
+  <div class="screen-wrap">
+    <div class="screen" id="screen-home"    role="main" aria-label="Home"></div>
+    <div class="screen" id="screen-health"  role="main" aria-label="Health"></div>
+    <div class="screen" id="screen-alerts"  role="main" aria-label="Alerts"></div>
+    <div class="screen" id="screen-devices" role="main" aria-label="Devices"></div>
+    <div class="screen" id="screen-profile" role="main" aria-label="Profile"></div>
+
+    <!-- Emergency overlay — inside screen-wrap so it covers everything but sits above nav via z-index:200 -->
+    <div class="emergency-overlay" id="sos-overlay" role="dialog" aria-modal="true" aria-label="Emergency SOS"></div>
+  </div>
+
+  <!-- Bottom navigation (z-index: 50) -->
+  <nav class="bottom-nav" aria-label="App navigation">
+
+    <div class="nav-item active" data-screen="home" role="tab" aria-label="Home">
+      <svg class="nav-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/>
+      </svg>
+      <span class="nav-item__label">Home</span>
+    </div>
+
+    <div class="nav-item" data-screen="health" role="tab" aria-label="Health">
+      <svg class="nav-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+      <span class="nav-item__label">Health</span>
+    </div>
+
+    <!-- SOS center button -->
+    <button class="nav-sos" id="sos-nav-btn" aria-label="Emergency SOS">
+      <div class="nav-sos__pill">SOS</div>
+      <span class="nav-sos__label">Emergency</span>
+    </button>
+
+    <div class="nav-item" data-screen="alerts" role="tab" aria-label="Alerts">
+      <svg class="nav-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+      </svg>
+      <span class="nav-item__label">Alerts</span>
+      <div class="nav-item__dot" id="alerts-dot"></div>
+    </div>
+
+    <div class="nav-item" data-screen="profile" role="tab" aria-label="Profile">
+      <svg class="nav-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span class="nav-item__label">Profile</span>
+    </div>
+
+  </nav>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast__icon">✓</span>
+    <span class="toast__msg"></span>
+  </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

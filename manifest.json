@@ -1,0 +1,14 @@
+{
+  "name": "PHC — Personal Health Companion",
+  "short_name": "PHC",
+  "description": "Real-time personal health monitoring and disaster resilience companion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F2EC",
+  "theme_color": "#0D5C5C",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
